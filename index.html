@@ -8,81 +8,8 @@
 
     <!-- We need to specify the character encoding, since we use chinese characters -->
     <meta charset="UTF-8">
-
-    <!-- #2 #css #elements -->
-    <style>
-
-        /* #2 #colorful #palette is:
-          * Background: #F5F5F5 (GREY 100)
-          * Primary Text: black
-
-          * Primary color: #3F51B5 (INDIGO)
-          * Primary color_text : white
-          * Accent color: #CDDC39 (LIME)
-          * Accent color_text: black
-          */
-
-        /*global styles */
-        * {
-            /* #2 #font #faces */
-            font-family: 'Arial', sans-serif;
-        }
-
-        body {
-            /* #2 #colorful #background */
-            background-color: #F5F5F5;
-        }
-
-        h1 {
-            /* #2 #colourful #app-bar */
-            background-color: #3F51B5;
-            color: white;
-        }
-
-        button {
-            /* #2 #colourful #plusfive */
-            background-color: #CDDC39;
-            color: black;
-            /* #2 #font capital #letters */
-            text-transform: uppercase;
-        }
-
-
-        /*styles for channel area*/
-        ul {
-            /* #2 #colorful #channelandchat */
-            background-color: white;
-        }
-
-        /*styles for chat area*/
-        p {
-            /* #2 #colorful #channelandchat */
-            background-color: white;
-        }
-
-        strong {
-            /* #2 #font #locations need an extra element, we'll use strong for w3w locations */
-            text-transform: uppercase;
-        }
-
-        h3 {
-            /* #2 #font #metadata is now medium */
-            font-size: medium;
-        }
-
-        em {
-            /* #2 #font #remaining overrides the default italic appearance of em elements*/
-            font-size: larger;
-            font-style: normal;
-        }
-        div{
-            width: 80%;
-        }
-        a{
-            color: #6200EE;
-        }
-    </style>
-
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Font+Name">
 </head>
 
 <body>
@@ -94,22 +21,22 @@
 
 
 <!-- #1 #channels #topics -->
-<ul style="list-style-type: none;">
+<ul>
     <!--adding some images to differentiate between list items which is the favourite-->
-    <li>#Yummy <img src="https://ip.lfe.mw.tum.de/sections/star-o.png" alt="white star"></li>
-    <li>#SevenContinents <img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="black star"></li>
-    <li>#KillerApp <img src="https://ip.lfe.mw.tum.de/sections/star-o.png" alt="white star"></li>
-    <li>#FirstPersonOnMars <img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="black star"></li>
-    <li>#Octoberfest <img src="https://ip.lfe.mw.tum.de/sections/star-o.png" alt="white star"></li>
+    <li>#Yummy <img src="https://ip.lfe.mw.tum.de/sections/star-o.png" style="vertical-align: middle;" alt="white star"></li>
+    <li id="selected-channel">#SevenContinents <img src="https://ip.lfe.mw.tum.de/sections/star.png" style="vertical-align: middle;" alt="black star"></li>
+    <li>#KillerApp <img src="https://ip.lfe.mw.tum.de/sections/star-o.png" style="vertical-align: middle;" alt="white star"></li>
+    <li>#FirstPersonOnMars <img src="https://ip.lfe.mw.tum.de/sections/star.png" style="vertical-align: middle;" alt="black star"></li>
+    <li>#Octoberfest <img src="https://ip.lfe.mw.tum.de/sections/star-o.png" style="vertical-align: middle;" alt="white star"></li>
 </ul>
 
 
 <!-- #1 #channels #buttons -->
-<div style="background-color: white;">
+<div id="tab-bar">
     <!--adding some images to improve the view of the buttons and illustrate each one means-->
-    <button><span><img src="https://ip.lfe.mw.tum.de/sections/lightbulb-o.png" alt="lightbulb"></span>new</button>
-    <button><span><img src="https://ip.lfe.mw.tum.de/sections/fire.png" alt="fire"></span>trending</button>
-    <button><span><img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="star"></span>favorites</button>
+    <button class="button-style selected"><span><img src="https://ip.lfe.mw.tum.de/sections/lightbulb-o.png" class="image-tab-bar" alt="lightbulb"></span>new</button>
+    <button class="button-style"><span><img src="https://ip.lfe.mw.tum.de/sections/fire.png" class="image-tab-bar" alt="fire"></span>trending</button>
+    <button class="button-style"><span><img src="https://ip.lfe.mw.tum.de/sections/star.png" class="image-tab-bar" alt="star"></span>favorites</button>
 </div>
 
 <!-- chat area -->
@@ -120,10 +47,11 @@
         <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
         <strong>cheeses.yard.applies</strong>
     </small>
+    <img src="https://ip.lfe.mw.tum.de/sections/star.png" style="vertical-align: middle;" alt="black star">
 </h1>
 
 <!-- #1 #chat #metadata contains location, weekday, day, and time -->
-<div>
+<div class="message own">
     <h3>
         <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
         <strong>cheeses.yard.applies</strong>
@@ -139,7 +67,7 @@
 
 
 <!-- #1 #chat #metadata contains location, weekday, day, and time -->
-<div>
+<div class="message">
     <h3>
         <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
         <strong><a href="https://map.what3words.com/truck.cotton.zone" target="_blank">truck.cotton.zone</a></strong>
@@ -155,7 +83,7 @@
 
 
 <!-- #1 #chat #metadata contains location, weekday, day, and time -->
-<div>
+<div class="message">
     <h3>
         <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
         <strong><a href="https://map.what3words.com/thus.best.dishes" target="_blank">thus.best.dishes</a></strong>
@@ -171,7 +99,7 @@
 
 
 <!-- #1 #chat #metadata contains location, weekday, day, and time -->
-<div>
+<div class="message">
     <h3>
         <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
         <strong><a href="https://map.what3words.com/driveway.helper.magazine" target="_blank">driveway.helper.magazine</a></strong>
@@ -187,7 +115,7 @@
 
 
 <!-- #1 #chat #metadata contains location, weekday, day, and time -->
-<div>
+<div class="message">
     <h3>
         <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
         <strong><a href="https://map.what3words.com/escapes.pitch.saucepan" target="_blank">escapes.pitch.saucepan</a></strong>
@@ -203,7 +131,7 @@
 
 
 <!-- #1 #chat #metadata contains location, weekday, day, and time  -->
-<div>
+<div class="message">
     <h3>
         <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
         <strong><a href="https://map.what3words.com/meanings.identity.pays" target="_blank">meanings.identity.pays</a></strong>

@@ -11,7 +11,7 @@
         /*global styles */
         * {
             /* #2 #font #faces */
-            font-family: 'Roboto'.'Arial', sans-serif;
+            font-family: 'Roboto','Arial', sans-serif;
             margin: 0px;
             padding: 0px;
         }
